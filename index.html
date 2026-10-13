@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GrokBot Showcase | Bots built by TerpGPT</title>
+<meta name="description" content="Discover GrokBots built by TerpGPT: Kung Fu Saga, Runescape Classic GrokBot, Sizzle and Topps Card Analysis. Add any bot to Grok in one tap.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="GrokBot Showcase | Bots built by TerpGPT">
+<meta property="og:description" content="Companion guides, a personal AI chef and Topps card analysis. Add TerpGPT's GrokBots in one tap.">
+<meta property="og:site_name" content="GrokBot Showcase">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a080b;--panel:#130f15;--line:#2a1f2c;--plum:#5b2a5e;--plum2:#8a4a8c;--crimson:#9e1b32;--crim2:#c8384f;--text:#ece6ea;--muted:#a69aa3;--gold:#c9a96e}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:400 16px/1.6 Inter,system-ui,sans-serif;min-height:100vh;position:relative;
+ background-image:radial-gradient(ellipse at 50% -10%,rgba(91,42,94,.35),transparent 60%),radial-gradient(ellipse at 100% 100%,rgba(158,27,50,.12),transparent 50%)}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.07;
+ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:49;box-shadow:inset 0 0 180px rgba(0,0,0,.85)}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+header{border-bottom:1px solid var(--line);background:rgba(10,8,11,.7);backdrop-filter:blur(6px);position:sticky;top:0;z-index:40}
+header .wrap{display:flex;justify-content:space-between;align-items:center;height:70px;gap:16px}
+.brand{font-family:Cinzel,serif;font-weight:700;font-size:21px;letter-spacing:.08em;text-decoration:none}
+.brand span{color:var(--crim2)}
+nav a{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-decoration:none;margin-left:24px;transition:color .2s,text-shadow .2s}
+nav a:hover{color:var(--text);text-shadow:0 0 12px rgba(200,56,79,.6)}
+.hero{text-align:center;padding:84px 0 40px}
+.eyebrow{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold)}
+h1,h2,h3{font-family:Cinzel,serif;font-weight:700;letter-spacing:.04em;margin:0}
+h1{font-size:clamp(34px,5.5vw,58px);line-height:1.15;margin:14px 0 16px}
+h1 em{font-style:normal;color:var(--crim2);text-shadow:0 0 30px rgba(158,27,50,.45)}
+.lede{max-width:560px;margin:0 auto;color:var(--muted);font-size:17px}
+.divider{display:flex;align-items:center;justify-content:center;gap:14px;margin:38px auto;max-width:420px;color:var(--plum2)}
+.divider::before,.divider::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--plum2),transparent)}
+section{padding:20px 0 30px}
+h2{font-size:clamp(24px,3vw,32px);text-align:center;margin-bottom:8px}
+.sub{text-align:center;color:var(--muted);margin:0 0 34px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.card{background:linear-gradient(180deg,#171119,var(--panel));border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s,border-color .25s}
+.card:hover{transform:translateY(-4px);border-color:#4a2a4c;box-shadow:0 0 0 1px rgba(138,74,140,.25),0 14px 40px rgba(91,42,94,.35),0 0 30px rgba(158,27,50,.18)}
+.emblem{height:170px;display:grid;place-items:center;background:radial-gradient(circle at 50% 55%,rgba(138,74,140,.35),transparent 65%),linear-gradient(160deg,#1d1220,#0e0a10);border-bottom:1px solid var(--line)}
+.emblem svg{width:108px;height:108px;filter:drop-shadow(0 0 14px rgba(200,56,79,.35))}
+.body{padding:20px 20px 22px;display:flex;flex-direction:column;flex:1}
+h3{font-size:18px;margin-bottom:8px}
+.body p{color:var(--muted);font-size:14px;margin:0 0 18px;flex:1}
+.btn{display:inline-block;text-align:center;text-decoration:none;font-weight:600;font-size:14px;padding:11px 18px;border-radius:999px;background:linear-gradient(135deg,var(--crimson),var(--plum));color:#fff;border:1px solid rgba(255,255,255,.08);transition:box-shadow .25s,filter .25s}
+.btn:hover,.btn:focus-visible{box-shadow:0 0 22px rgba(200,56,79,.55);filter:brightness(1.12);outline:none}
+.links{margin-top:12px;min-height:52px;align-content:flex-start;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 14px}
+.links a{color:var(--muted);text-decoration:none;border-bottom:1px solid transparent;transition:color .2s,border-color .2s}
+.links a:hover{color:var(--gold);border-color:var(--gold)}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:28px}
+.panel h2{text-align:left;font-size:22px;margin-bottom:16px}
+.panel ul{list-style:none;margin:0;padding:0}
+.panel li{padding:11px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+.panel li:first-child{border-top:0}
+.panel li a{text-decoration:none;transition:color .2s,text-shadow .2s}
+.panel li a:hover{color:var(--crim2);text-shadow:0 0 10px rgba(200,56,79,.4)}
+.tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.ph{color:#e0a14a;border:1px dashed #e0a14a;border-radius:6px;padding:1px 7px;font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+footer{border-top:1px solid var(--line);margin-top:40px;padding:28px 0 40px;text-align:center;color:var(--muted);font-size:13px}
+footer .brand{font-size:15px}
+@media (max-width:1000px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:680px){.links{min-height:0}.wrap{padding:0 18px}header .wrap{height:auto;padding-top:14px;padding-bottom:12px;flex-direction:column;gap:6px}nav a{margin:0 9px;font-size:12px}header{position:static}
+ .hero{padding:52px 0 24px}.grid,.duo{grid-template-columns:1fr}.panel{padding:22px}.panel li{flex-direction:column;gap:2px}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+ <a class="brand" href="#top">GrokBot <span>Showcase</span></a>
+ <nav><a href="#bots">Bots</a><a href="#community">Community</a><a href="#featured">Featured</a></nav>
+</div></header>
+<main id="top">
+<div class="wrap">
+ <section class="hero">
+  <div class="eyebrow">A small collection of GrokBots</div>
+  <h1>Bots built by <em>TerpGPT</em></h1>
+  <p class="lede">Companion guides, a kitchen familiar and a card appraiser. Pick a bot, tap Add GrokBot, and it's yours.</p>
+ </section>
+ <div class="divider" aria-hidden="true">✦</div>
+
+ <section id="bots">
+  <h2>The Bots</h2>
+  <p class="sub">Each one opens in Grok, ready to use.</p>
+  <div class="grid">
+   <article class="card">
+    <div class="emblem"><svg viewBox="0 0 100 100" fill="none" stroke-linecap="round" aria-hidden="true">
+     <circle cx="50" cy="50" r="44" stroke="#5b2a5e" stroke-width="1.5"/><circle cx="50" cy="50" r="38" stroke="#c9a96e" stroke-width=".8" stroke-dasharray="2 4"/>
+     <g stroke="#e8dfe4" stroke-width="3"><path d="M27 73 L70 30"/><path d="M73 73 L30 30"/></g>
+     <g stroke="#c8384f" stroke-width="4"><path d="M24 64 L36 76"/><path d="M76 64 L64 76"/></g>
+     <path d="M70 30 l5-5 M30 30 l-5-5" stroke="#e8dfe4" stroke-width="2"/><circle cx="50" cy="51.5" r="4" fill="#9e1b32"/></svg></div>
+    <div class="body"><h3>Kung Fu Saga</h3><p>A companion guide for classes, builds, bosses and gear.</p>
+     <a class="btn" href="https://x.ai/bot/iv-6BncmS0G5UWrxc9tN7" target="_blank" rel="noopener">Add GrokBot</a>
+     <div class="links"><a href="https://botdirectory.ai/bots/kung-fu-saga-starter-guide/" target="_blank" rel="noopener">Directory listing ↗</a></div></div>
+   </article>
+   <article class="card">
+    <div class="emblem"><svg viewBox="0 0 100 100" fill="none" aria-hidden="true">
+     <path d="M50 12 L82 24 V50 C82 70 68 82 50 90 C32 82 18 70 18 50 V24 Z" fill="#1c1220" stroke="#c9a96e" stroke-width="2"/>
+     <path d="M50 20 L74 29 V50 C74 66 63 75 50 82 C37 75 26 66 26 50 V29 Z" fill="#5b2a5e" opacity=".55"/>
+     <path d="M50 26 V78 M30 46 H70" stroke="#c8384f" stroke-width="5"/><circle cx="50" cy="46" r="5" fill="#c9a96e"/></svg></div>
+    <div class="body"><h3>Runescape Classic GrokBot</h3><p>A beginner companion for RuneScape Classic.</p>
+     <a class="btn" href="https://x.ai/bot/0JrDm0jPnwX5i6nzl689d" target="_blank" rel="noopener">Add GrokBot</a>
+     <div class="links"><a href="https://botdirectory.ai/bots/runescape-classic-interactive-wiki/" target="_blank" rel="noopener">Directory listing ↗</a><a href="https://runescapeclassic.gold" target="_blank" rel="noopener">Official play hub ↗</a></div></div>
+   </article>
+   <article class="card">
+    <div class="emblem"><svg viewBox="0 0 100 100" fill="none" aria-hidden="true">
+     <circle cx="50" cy="50" r="44" stroke="#5b2a5e" stroke-width="1.5"/>
+     <path d="M50 16 C60 32 72 40 70 60 C68 76 58 84 50 84 C42 84 32 76 30 60 C29 48 36 42 40 34 C42 44 46 48 50 48 C48 38 46 28 50 16 Z" fill="#9e1b32" stroke="#c8384f" stroke-width="1.5"/>
+     <path d="M50 52 C56 60 60 66 58 72 C56 78 44 78 42 72 C40 66 46 60 50 52 Z" fill="#c9a96e" opacity=".9"/></svg></div>
+    <div class="body"><h3>Sizzle</h3><p>A personal AI chef for whatever is in your kitchen.</p>
+     <a class="btn" href="https://x.ai/bot/ID30J5nWtkGs_7yNRrw0w" target="_blank" rel="noopener">Add GrokBot</a>
+     <div class="links"><a href="https://botdirectory.ai/bots/sizzle/" target="_blank" rel="noopener">Directory listing ↗</a></div></div>
+   </article>
+   <article class="card">
+    <div class="emblem"><svg viewBox="0 0 100 100" fill="none" aria-hidden="true">
+     <rect x="30" y="18" width="44" height="62" rx="4" transform="rotate(10 52 49)" fill="#1c1220" stroke="#5b2a5e" stroke-width="1.5"/>
+     <rect x="26" y="16" width="44" height="64" rx="4" fill="#160f19" stroke="#c9a96e" stroke-width="2"/>
+     <rect x="31" y="21" width="34" height="54" rx="2" stroke="#5b2a5e" stroke-width="1"/>
+     <path d="M48 32 L52.5 43 L64 43.5 L55 50.5 L58 62 L48 55.5 L38 62 L41 50.5 L32 43.5 L43.5 43 Z" fill="#9e1b32" stroke="#c8384f" stroke-width="1"/></svg></div>
+    <div class="body"><h3>Topps Card Analysis</h3><p>Topps card prices, odds and release notes.</p>
+     <a class="btn" href="https://x.ai/bot/vkKodowrGVr0Be2fDVcuG" target="_blank" rel="noopener">Add GrokBot</a>
+     <div class="links"><a href="https://botdirectory.ai/bots/topps-card-analysis-bot/" target="_blank" rel="noopener">Directory listing ↗</a></div></div>
+   </article>
+  </div>
+ </section>
+
+ <div class="divider" aria-hidden="true">✦</div>
+
+ <div class="duo">
+  <section class="panel" id="community">
+   <h2>Community</h2>
+   <ul>
+    <li><a href="https://x.com/i/chat/group_join/g2109846388561375245/6YN28Fh7DU" target="_blank" rel="noopener">Join the X group chat ↗</a><span class="tag">X chat</span></li>
+    <li><a href="#" aria-disabled="true">Brian Romelle's Memory Bot</a><span class="ph">Placeholder · link coming soon</span></li>
+   </ul>
+  </section>
+  <section class="panel" id="featured">
+   <h2>Featured In</h2>
+   <ul>
+    <li><a href="https://x.com/elonmusk/status/2109867516646637579" target="_blank" rel="noopener">Elon Musk's post on X ↗</a><span class="tag">X post</span></li>
+    <li><a href="https://botdirectory.ai/bots/kung-fu-saga-starter-guide/" target="_blank" rel="noopener">Kung Fu Saga ↗</a><span class="tag">Bot Directory</span></li>
+    <li><a href="https://botdirectory.ai/bots/runescape-classic-interactive-wiki/" target="_blank" rel="noopener">Runescape Classic GrokBot ↗</a><span class="tag">Bot Directory</span></li>
+    <li><a href="https://botdirectory.ai/bots/sizzle/" target="_blank" rel="noopener">Sizzle ↗</a><span class="tag">Bot Directory</span></li>
+    <li><a href="https://botdirectory.ai/bots/topps-card-analysis-bot/" target="_blank" rel="noopener">Topps Card Analysis ↗</a><span class="tag">Bot Directory</span></li>
+   </ul>
+  </section>
+ </div>
+</div>
+</main>
+<footer><div class="wrap"><div class="brand">GrokBot <span>Showcase</span></div><p>Bots built by TerpGPT.</p></div></footer>
+</body>
+</html>
